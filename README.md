@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Foundry Deploy Action
-        uses: grossiwm/foundry-deploy-action@v1
+        uses: grossiwm/foundry-deploy-action@latest
         with:
           rpc-url: ${{ secrets.RPC_URL }}
           private-key: ${{ secrets.PRIVATE_KEY }}
