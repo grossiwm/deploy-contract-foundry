@@ -19,8 +19,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy Smart Contracts
-        uses: your-github-username/foundry-deploy-action@v1
+      - name: Foundry Deploy Action
+        uses: grossiwm/foundry-deploy-action@v1
         with:
           rpc-url: ${{ secrets.RPC_URL }}
           private-key: ${{ secrets.PRIVATE_KEY }}
