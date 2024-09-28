@@ -32,10 +32,12 @@ runs:
     - name: Compile contracts
       run: forge build
       shell: bash
+      working-directory: ${{ inputs.project_dir }}
 
     - name: Deploy contracts
       run: forge script ${{ inputs.deploy-script }} --broadcast --verify --rpc-url $FOUNDRY_ETH_RPC_URL --private-key $PRIVATE_KEY --chain-id $CHAIN_ID --etherscan-api-key $ETHERSCAN_API_KEY
       shell: bash
+      working-directory: ${{ inputs.project_dir }}
 
 inputs:
   rpc-url:
@@ -53,3 +55,7 @@ inputs:
   deploy-script:
     description: "The path to the deploy script"
     required: true
+  project_dir:
+    description: "The directory containing the Foundry project (defaults to the root directory if not provided)."
+    required: false
+    default: "." 
