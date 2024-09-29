@@ -28,3 +28,6 @@ jobs:
           etherscan-api-key: ${{ secrets.ETHERSCAN_API_KEY }}
           deploy-script: "path/to/your/deploy_script.sol"
 ```
+
+## Example Project
+Check out the example project using this action [here](https://github.com/grossiwm/foundry-deploy-action-example).
